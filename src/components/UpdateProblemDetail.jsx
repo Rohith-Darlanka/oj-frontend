@@ -90,7 +90,7 @@ const UpdateProblemDetail = () => {
         throw new Error('Missing problem ID for update');
       }
 
-      const response = await axios.put(
+      const response = await API.put(
         `/api/problems/${state.numericProblemId}`,
         state.editedValues
       );
