@@ -91,7 +91,7 @@ const UpdateProblemDetail = () => {
       }
 
       const response = await API.put(
-        `/api/problems/${state.numericProblemId}`,
+        `/problems/${state.numericProblemId}`,
         state.editedValues
       );
 
