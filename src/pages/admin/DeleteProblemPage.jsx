@@ -34,7 +34,8 @@ const DeleteProblem = () => {
     try {
       setDeleteStatus(prev => ({ ...prev, [problemId]: 'deleting' }));
       
-      const response = await axios.delete(`/api/delete/${problemId}`);
+      const response = await API.delete(`/delete/${problemId}`);
+
       
       if (response.data.success) {
         setProblems(prev => prev.filter(p => p.problem_id !== problemId));
